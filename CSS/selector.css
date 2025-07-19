@@ -1,0 +1,46 @@
+
+/* selector tag -- */
+
+
+
+
+
+h1{
+color: red;
+text-align: center;
+
+}
+/*class*/
+
+.head{
+    color: green;
+}
+
+/* ID */
+#head{
+    color: purple;
+
+}
+
+/* universal */
+*{
+    border: 2px solid red;
+}
+
+
+/* -----------------simple selector end here-----------------------------------*/ 
+
+[href=""]{
+
+color: blue;
+
+}
+
+/* ----------------------------------------atrribute selector end here -------------------------------------------*/
+
+
+
+
+
+
+

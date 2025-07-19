@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: math;
+        }
+
+
+        section,
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+        section {
+            padding: 20px 30px;
+            background-color: purple;
+            color: white;
+        }
+
+
+        li {
+            cursor: pointer;
+        }
+
+
+        .bi-list {
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+
+        .bars {
+            display: none;
+        }
+
+
+        @media (max-width:500px) {
+            .bars {
+                display: block;
+            }
+
+
+            .list {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <div class="logo">
+            <h3>LOGO</h3>
+        </div>
+        <div class="list">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Service</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="bars">
+            <i class="bi bi-list"></i>
+        </div>
+    </section>
+</body>
+
+
+</html>

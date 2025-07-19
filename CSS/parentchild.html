@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        section {
+            background-color: gray;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .box {
+            width: 50%;
+            height: 200px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .innerBox{
+            width: 50%;
+            height: 50%;
+            background-color: orange;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+        }
+
+
+        .childBox{
+            width: 50%;
+            background-color: white;
+            height: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <div class="box">
+            <div class="innerBox">
+                <div class="childBox"></div>
+                <div class="childBox"></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+</html>

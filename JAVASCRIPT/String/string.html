@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+    <script>
+//        // // 1. String Interpolation & Conditional Expression
+         let firstName = "Abhijeet";
+        let lastName = "Narsale";
+        let age = 35;
+        console.log(firstName)
+
+//         // 1.Using String Concatenation
+
+        let message = 'Hii 👋 ' + firstName + " " + lastName + ' your age is : ' + (age + 1) + 
+        '\n adhar is : ' + (age > 20 ? 'valid' : 'invalid');
+        console.log(message);  
+        
+// //2. Using Template Literals (ES6)
+
+let newMessage = `Hii 👋 ${firstName} ${lastName} your age is : ${age + 1}
+adhar is : ${age > 20 ? 'valid' : 'invalid'}`;
+console.log(newMessage);
+// ----------------------------------------------------------------------------------------------------------------------
+
+
+// // //2. Arrays Are Mutable
+let arr = [22, 33, 44, 55, 66, 77];
+arr[1] = true;//wrong also false
+console.log(arr);
+
+// --------------------------------------------------------------------------------------------------------------------------------
+
+// // //3. Strings Are Immutable
+let str = "Hello ' Abhijeet i'm string  1 or 2 or 3 ";
+console.log(str);
+
+// *********************************************************************************************************************************************888
+
+
+
+    </script>
+
+</body>
+
+</html>

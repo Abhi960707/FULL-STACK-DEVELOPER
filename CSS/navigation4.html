@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Navigation Bar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+     
+    }
+
+    nav {
+      background-color: rgb(16, 132, 204);
+      padding: 10px;
+      margin: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .new{
+      display: flex;
+
+    width: 100%;
+    height: 500px;
+    gap: 300px;
+    justify-content: center;
+    text-align: center;
+
+    }
+    .navigation{
+    
+      list-style: none;
+     /*  padding: 20px;
+          margin: 10px;
+           padding-bottom: 20px;( can you put it in ID )*/
+      
+    }
+    #nav1{
+        margin-left: 50px;
+          padding: 20px;
+          margin: 10px;
+           padding-bottom: 20px;
+           
+        
+    }
+    .box{
+      
+        width: 300px;
+            height: 400px;
+            background-color: rgb(40, 198, 187);
+            border: 3px solid red;
+            margin: 50px;
+            padding:20px;
+            text-align: center;
+        }
+      .box2{
+        border: 3px solid black;
+               width: 300px;
+            height: 400px;
+             margin: 50px;
+            padding:20px;
+      }
+
+    
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Design<span style="color: white;">X</span></div>
+
+    
+    <ul class="navigation" id="nav1">
+      <li>Home</a></li>
+       <li>About</li>
+         <li>Services</li>
+           <li>Contact</li>
+      <li>Feedback</li>
+    </ul>
+  </nav>
+
+
+
+  <div class="new">
+<div class="box">
+     <h2>DesignX</h2><br>
+    
+      <h4>Home</h4>
+      <h4>About</h4>
+      <h4>Services</h4>
+      <h4>Conteact</h4>
+      <h4>Feedback</h4>
+</div>
+
+<div class="box2">
+    <h2>RESPONSIVE</h2><br>
+    <h1>NAVIGATION BAR</h1>
+    <p>HTML AND CSS ONLY</p>
+
+</div>
+</body>
+</html>

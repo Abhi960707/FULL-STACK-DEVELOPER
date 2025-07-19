@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+
+    ## What is JavaScript?
+JavaScript (JS) is a versatile, high-level programming language that powers dynamic behavior on websites and web apps.
+
+    ##TYPES OF DATATYPE 
+    1.Primitive :(- Immutable (cannot be changed)
+                  - Passed by value (not by reference)
+                  - Not objects (do not have properties or methods)
+
+    2.Non-primitive : (- Mutable
+                       - Passed by reference
+                       - Can have properties and methods.)
+
+
+
+
+    
+
+    -----------------1. PRIMITIVE DATATYPE-------------------
+    null 
+    number 
+    boolean
+    bigInt
+    string
+    symbol
+    undefined
+-->
+    <script>
+        //null
+        let primitiveVariable = null
+        //number 
+        let primitiveVariable1 = "String   " + 'Abhijeet narsale'
+        //boolean    
+        let primitiveVariable2 = Symbol("Hello abhi")
+        //bigInt   
+        let primitiveVariable3 = true
+        //string    
+        let primitiveVariable4 = 1234567890
+        //symbol   
+        let primitiveVariable5 = 12
+        //undefined
+        let primitiveVariable6;
+
+
+        //output        
+        console.log(primitiveVariable)//Output: null
+        console.log(primitiveVariable1)//Output: String  Abhijeet narsale 
+        console.log(primitiveVariable2)//Output: Symbol(Hello abhi) 
+        console.log(primitiveVariable3)//Output: true
+        console.log(primitiveVariable4)//Output: 1234567890
+        console.log(primitiveVariable5)//Output: 12
+        console.log(primitiveVariable6)//Output: undefined this is a  error
+
+
+    </script>
+
+
+    <!-- ----------------2. Non-prinmitive-------------
+
+    1.Array
+    2.Object
+   -->
+
+
+    <!-- 1.Array   -Ordered collection (multiple data store     )-->
+
+    <script>
+
+        let arr = [12, true, null, 'string', Symbol("hiii AD"), 84689726, "JAVASCRIPT"]
+
+        //Output(using index call):    (datatype=arr[value=4])
+        console.log(arr[4]); //Output: Symbol('Hello')
+        console.log(arr[6]); //Output: JAVASCRIPT
+        console.log(arr[5]); //Output: 84689726
+
+
+
+        // let user = {
+        //     key: value
+        // }
+    </script>
+
+
+    <!--  2.Object – Key-value pair structure -->
+
+    <script>
+
+        let user = {
+            username: "abhi07",
+            useremail: "abhi@gmail.com",
+            phone: 846897979,
+            hasAdhar: false
+
+        }
+        //TWO STEP OUTPUT 1. .KEY  2. []INDEXWISE
+        //Output (using .key / Access using dot notation):  (datatype=user[value=hasAdhar])
+        console.log(user.hasAdhar)//Output : false
+
+        //Output (using index):   (datatype=user[value=username])
+        console.log(user['username'])//Output: abhi07
+        console.log(user['useremail'])//Output: abhi@gmail.com
+        console.log(user['phone'])//Output: 846897979
+    </script>
+</body>
+
+</html>

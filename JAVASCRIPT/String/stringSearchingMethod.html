@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ let str = "Hello ' Abhijeet i'm string";
+
+// ## String Searching & Matching
+
+//  1. Searching. (All data search the data )
+// (i).search('h');      kiti numberla character aahe te dakhvato // → Returns index of 'h' (Data Search kartay aani kiti numberla aahe ti show kartay)
+ console.log(str.search('Abhi'));   // Result:8
+   
+ 
+//  2.Matching. (All data match karto index,input,groups)
+// (i).match('i');        //  First letter Show hote → First match of 'i'
+console.log(str.match('l')); //Result: ['l', index: 2, input: "Hello ' Abhijeet i'm string", groups: undefined]
+//  (ii).match(/\d/g);      // → All digits as array ['1', '2', '3']
+console.log(str.match(/\d/g)); //Result: null
+// (iii).includes('i');     // → true/false 
+console.log(str.includes('i')); //Result: true
+//  (iv)str.charAt(2);    two/kontya tye numbernantar text aahe te dakhvate    // → Character at index 2
+console.log(str.charAt(2));  //Result: l
+// (v)str.indexOf('J');      //  kiti numberla character same on .search method → Index of 'J'
+console.log(str.indexOf('jeet'));  //Result:12
+
+
+console.log(str);
+    </script>
+    
+</body>
+</html>

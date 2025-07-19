@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Search UI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #d3eaff, #3e8ed0);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('https://www.transparenttextures.com/patterns/palm.png') repeat;
+      background-size: cover;
+      padding: 3rem;
+      gap: 2rem;
+      position: relative;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(15px);
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 300px;
+      color: #000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .login-card input, .search-card input {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    .login-card button {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #3e8ed0;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .login-text, .search-text {
+      position: absolute;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      border: 3px solid red;
+      text-align: center;
+      border-radius: 20px;
+      width: 200px; 
+    }
+
+    .login-text {
+      left: 5%;
+      bottom: 10%;
+    }
+
+    .search-text {
+      right: 5%;
+      bottom: 10%;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div><strong>Logo</strong></div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Featured</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+    <div>
+      🔍 👤
+    </div>
+  </nav>
+
+  <div class="box">
+    <div class="card login-card">
+      <h2>Log In</h2>
+      <input type="email" placeholder="Write your email" />
+      <input type="password" placeholder="Enter your password" />
+      <p><a href="#">Forgot your password?</a></p>
+      <p>Don't have an L̥? <a href="#">Sign Up</a></p>
+      <button>Log In</button>
+    </div>
+
+    <div class="card search-card">
+      <input type="text" placeholder="What are you looking for?" />
+    </div>
+
+    <div class="login-text">Login</div>
+    <div class="search-text">Search</div>
+  </div>
+ 
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head></head >
+<body>
+
+<ol type="square">
+<li>mango</>
+<li>kiwi/>
+<li>apple</>
+<li>grapes</>
+</ol>
+
+<ul type="square">
+<li>mango</>
+<li>kiwi/>
+<li>apple</>
+<li>grapes</>
+</ul>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ##// // String Properties & Methods
+        let str = "Hello ' Abhijeet i'm string      ";
+        // 1. .length  all number  count 
+        console.log(str.length) // Result: 28
+
+        //  Case Conversion
+        // 2. .tolowercase (Case conversion) alphabet small lipi format
+        console.log(str.toLowerCase()); // Result: hello ' abhijeeet i'm string 
+
+        //3. .touppercase (Case conversion) Capital Big lipi format
+        // (i) .toLocaleUpperCase()
+        console.log(str.toLocaleUpperCase()) // Result: HELLO ' ABHIJEEET I'M STRING
+        // (ii).toUpperCase()
+        console.log(str.toUpperCase())       //Result: HELLO ' ABHIJEEET I'M STRING
+
+        // //Split into Parts
+        //4.  .split('') (i)Spilts every character &  (ii)Splits at " '"
+        // (i)
+        console.log(str.split(""));  //Result: (28)['H', 'e', 'l', 'l', 'o', ' ', "'", ' ', 'A', 'b', 'h', 'i', 'j', 'e', 'e', 'e', 't', ' ', 'i', "'", 'm', ' ', 's', 't', 'r', 'i', 'n', 'g']
+        // (ii)
+        console.log(str.split(" ' "));  // //Result: (2) ['Hello', "Abhijeeet i'm string"]
+
+        // // Trimming Whitespace
+        // 5. .trim()
+        //  (i) .trim();   // → Splits every character // empty space cut karte aani memory(data sequence ne aante)
+        console.log(str.trim());
+        //(ii) .trimStart()    // → Removes leading whitespace
+        console.log(str.trimStart());
+        //(iii) .trimEnd()      // → Removes trailing whitespace
+        console.log(str.trimEnd());
+
+
+        // Slice. (cut the character or data this number to number)
+        // 6.  .slice(2, 4);   // → Characters from index 2 to 3
+        console.log(str.slice(2, 4))  //Result: ll
+
+        // 7.Replace (repalce the data)
+
+        // (i) .replace("       ", "😁"); // → Replace specific pattern (repalce the data)
+        console.log(str.replace("Abhijeet", "😁"));   //Result:Hello ' 😁 i'm string
+        // (i)  str.replaceAll("i", " S ");   // → Replace all occurrences of 'i' (All data aahe tyatil particular data ekach veli delete karnyasathi )
+        console.log(str.replaceAll("i", " S "));  //Result:Hello ' Abh S jeet  S 'm str S ng
+
+        // Repeat   (repeat the data)
+        // 8. .repeat(2);  used multiple time data show. Two time print 
+        console.log(str.repeat(3)) // Result: Hello ' Abhijeet i'm stringHello ' Abhijeet i'm stringHello ' Abhijeet i'm string
+
+
+
+
+        console.log(str)
+
+
+
+    </script>
+
+</body>
+
+</html>

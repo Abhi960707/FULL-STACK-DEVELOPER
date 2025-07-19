@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- MOUSE EVENT  IMPORTANT  -->
+
+    <!-- onclick event used by tap on mouse single click -->
+    <button onclick="callAllEvents('Click Event')">click Event</button>
+
+    <!-- ondblclick event used by tap on mouse double click  -->
+    <button ondblclick="callAllEvents('Double click event')">Double click event</button>
+
+    <!-- oncontextmenu event used by tap on mouse right click  -->
+    <button oncontextmenu="callAllEvents('Right click event')">Right click event</button>
+
+    <!-- onmouseenter event used by mouse pointer tap on this button atomatically run the console  -->
+    <button onmouseenter="callAllEvents('Mouse Enter event')">Mouse Enter event</button>
+
+    <!-- onmouseleave event used by mouse pointer button firstly tap and leave this button atomatically run the console  -->
+    <button onmouseleave="callAllEvents('Mouse Leave event')">Mouse Leave event</button>
+
+    <!-- onkeydown event enter the data in text and delete the data wil be all size count in this console  -->
+    <input type="text" onkeydown="callAllEvents('Key Down Event')" name="" id="">
+
+    <!-- onkeyup event enter the data in text,firstly add data & tap backspace button is released all data. later add,minus data show in console   -->
+    <input type="text" onkeyup="callAllEvents(value)" name="" id="">
+    <script>
+
+        function callAllEvents(eventMesage) {
+            console.log(eventMesage)
+        }
+    </script>
+
+</body>
+
+
+</html>
