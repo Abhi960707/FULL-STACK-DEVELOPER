@@ -10,13 +10,70 @@
     <h2 value="new">abhijeet </h2>
     <h1>abhi</h1>
 
-    <img src=""width"200", alt="">
-<script>
-let p=document.getElementsByTagName('h2')[0]
-let p=document.getElementsByTagName('h2')[1].innerText
-let p.innerText=paragraph.innerText
+    
 
-p.value=paragraph.new
+
+    <!-- <h1>https://www.facebook.com/</h1>
+    <h2>Facebook</h2>
+    <a href=""></a> -->
+
+
+    <h2 id="https://www.facebook.com/">Facebook</h2>
+    <a href=""></a>
+
+
+    <!--
+        Todays task
+
+
+        h1 -> a (get innerText from h1 and set into anchor)
+        a (set bootstrap link into anchor)
+        h1 -> img (get innerText from h1 and set into img src)
+        img.height -> img.width (get height from img and set into img width)
+        p -> textare (get innerText from p and set into textarea)
+        textarea (set style color:red, text-transform:uppercase into textarea)
+
+
+        img.src -> p.innerText (get img src and set into Paragraph innertext)
+    -->
+    <input>
+<input type="text">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+<input type="text" name="" id="">
+
+    <img src="" width="200" height="250" alt="THis is girl">
+    
+    <p></p>
+
+
+    <script>
+        let h2Tag = document.getElementsByTagName('h2')[0] // Get
+        let anchorTag = document.getElementsByTagName('a')[0]
+        anchorTag.innerText = h2Tag.innerText // Set
+        anchorTag.href = h2Tag.id
+
+
+        document.getElementsByTagName("img")[0].src="https://th.bing.com/th/id/R.21a33c0a9a9b81079e801298b7a3f527?rik=EIMrOzwjyPNKdg&riu=http%3a%2f%2feng.wrnoticia.com%2fwp-content%2fuploads%2f2023%2f10%2fBest-AI-apps-for-iPhone.jpg&ehk=7uDAFYsENwMwfTxGuULWstFIfVw2kSeBmClOHVQflE0%3d&risl=&pid=ImgRaw&r=0"
+        // let anchorUrl = document.getElementsByTagName('h1')[0].innerText
+        // let anchorInnerText = document.getElementsByTagName('h2')[0].innerText
+
+
+        // let anchorTag = document.getElementsByTagName('a')[0]
+        // anchorTag.href = anchorUrl
+        // anchorTag.innerText = anchorInnerText
+
+
+        let imgUrl = document.getElementsByTagName('img')[0].src
+        // document.getElementsByTagName('p')[0].innerText = imgUrl
+
+
+        document.getElementsByTagName('input')[1].type = 'password'
+        document.getElementsByTagName('input')[2].type = 'date'
+        document.getElementsByTagName('input')[3].type = 'file'
+        document.getElementsByTagName('input')[4].type = 'week'
+
+        document.getElementsByTagName('input')[0].placeholder = 'Enter Password'
 
 
 
