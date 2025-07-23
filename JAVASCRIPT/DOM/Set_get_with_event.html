@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set get event</title>
+</head>
+
+<body>
+    <h1>Hii im a javascript </h1>
+    <i></i>
+    <button onclick="Setnew"> set inner text </button> <br>
+    <button onclick="showimage()"> Show images</button>
+    <img src="" width="300" height="320" alt="this is a nature ">
+    <script>
+        function Setnew() {
+            let h1tag = document.getElementsByTagName('h1')[0]
+            document.getElementsByTagName('i')[0].innerText = h1tag.innerText
+            console.log("Hello all of you")
+        }
+
+        function showimage() {
+            let h2tag = document.getElementsByTagName("img")[0].src = "https://images.unsplash.com/photo-1752986002031-579569bd3d6d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNXx8fGVufDB8fHx8fA%3D%3D"
+        }
+
+
+    </script>
+
+
+
+
+
+    <h1>Hiii Im Javascript</h1>
+    <i></i><br>
+    <button onclick="setInnerTextToItalic()">Set InnerText</button> <br>
+
+
+    <!-- new Example -->
+    <input type="text" placeholder="Enter Image Url" id=""><br>
+    <button onclick="showImage()">Show Image</button><br>
+    <img src="" alt="" width="200" height="200">
+    <!-- <textarea name="" id=""></textarea> -->
+
+
+    <input type="text" placeholder="Enter Anchor Href" id=""><br>
+    <input type="text" placeholder="Enter Anchor InneText" id=""><br>
+    <button onclick="createAnchor()">Create Anchor Tag</button>
+    <a href=""></a>
+    <script>
+        function setInnerTextToItalic() {
+            let h1Tag = document.getElementsByTagName('h1')[0]
+            document.getElementsByTagName('i')[0].innerText = h1Tag.innerText
+            console.log("hiiii")
+        }
+        // setInnerTextToItalic()
+
+
+        function showImage() {
+            let imgUrl = document.getElementsByTagName('input')[0].value
+            document.getElementsByTagName('img')[0].src = imgUrl
+        }
+
+
+        function createAnchor() {
+            let anchorLink = document.getElementsByTagName('input')[1].value
+            let anchorInnerText = document.getElementsByTagName('input')[2].value
+
+
+            let anchorTag = document.getElementsByTagName('a')[0]
+            anchorTag.href = anchorLink
+            anchorTag.innerText = anchorInnerText
+        }
+    </script>
+
+</body>
+
+</html>

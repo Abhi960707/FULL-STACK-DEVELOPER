@@ -1,0 +1,42 @@
+Style using  js
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            text-decoration-line: underline;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Heading 1</h1>
+
+
+    <img src="https://m.media-amazon.com/images/I/41QZSg8drOL._UF1000,1000_QL80_.jpg" alt="">
+    <script>
+
+
+        // document.getElementsByTagName('h1')[0].innerText = ""
+        let h1Tag = document.getElementsByTagName('h1')[0]
+        h1Tag.style.backgroundColor = "greenyellow"
+        h1Tag.style.textAlign = 'center'
+        h1Tag.style.textDecorationLine = 'underline'
+
+
+        let imgTag = document.getElementsByTagName('img')[0]
+        imgTag.style.width = '200px'
+        imgTag.style.height = '200px'
+        imgTag.style.borderRadius = '50%'
+    </script>
+</body>
+
+
+</html>

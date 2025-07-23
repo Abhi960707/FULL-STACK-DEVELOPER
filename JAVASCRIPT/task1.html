@@ -1,0 +1,32 @@
+ <!-- h1 -> a (get innerText from h1 and set into anchor)
+        a (set bootstrap link into anchor) -->
+        <!-- h1 -> img (get innerText from h1 and set into img src)
+        img.height -> img.width (get height from img and set into img width)
+        p -> textare (get innerText from p and set into textarea)
+        textarea (set style color:red, text-transform:uppercase into textarea) -->
+
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 1</title>
+       </head>
+       <body>
+    
+        
+        <h1>
+        https://getbootstrap.com/
+    </h1>
+    <h2>Bootstrap</h2>
+    <a href=""></a>
+
+    <script>
+        let h1Tag = document.getElementsByTagName('h1')[0].innerText  
+    let value = document.getElementsByTagName('h2')[0].innerText  
+    document.getElementsByTagName('a')[0].href = h1Tag
+    document.getElementsByTagName('a')[0].innerText = value 
+</script>
+
+       </body>
+       </html>

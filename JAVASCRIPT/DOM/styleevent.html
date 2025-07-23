@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+
+        .box {
+            background-color: gray;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            transition-duration: .9s;
+        }
+
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="mainBox">
+            <div class="box"></div>
+            <button onclick="setStyleOnBox('10%')">10%</button>
+            <!-- <button onclick="setStyleOnBox('20%')">20%</button>
+            <button onclick="setStyleOnBox('30%')">30%</button>
+            <button onclick="setStyleOnBox('40%')">40%</button>
+            <button onclick="setStyleOnBox('50%')">50%</button><br>
+            <button onclick=" setBgOnBox('red')">Red</button>
+            <button onclick=" setBgOnBox('green')">Green</button>
+            <button onclick=" setBgOnBox('blue')">Blue</button> -->
+        </div>
+    </section>
+    <script>
+        function setStyleOnBox(radius) {
+            let box = document.getElementsByTagName('div')[1]
+            box.style.borderRadius = radius
+        }
+
+
+        function setBgOnBox(bgColor) {
+            let box = document.getElementsByTagName('div')[1]
+            box.style.backgroundColor = bgColor
+        }
+    </script>
+</body>
+</html>

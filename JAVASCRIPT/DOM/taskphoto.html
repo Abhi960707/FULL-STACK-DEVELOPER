@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="mainBox">
+            <div class="box"></div>
+            <button onclick="setStyleOnBox('50%')">50%</button>
+
+        </div>
+    </section>
+    <script>
+        function setStyleOnBox(radius) {
+            let box = document.getElementsByTagName('div')[1]
+            box.style.borderRadius = radius
+        
+        }
+
+
+        // function setBgOnBox(bgColor) {
+        //     let box = document.getElementsByTagName('div')[1]
+        //     box.style.backgroundColor = bgColor
+        // }
+
+
+    </script>
+</body>
+
+</html>
