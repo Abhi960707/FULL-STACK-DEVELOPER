@@ -5,22 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.12.0/font/bootstrap-icons.min.css"
+        integrity="sha512-owiN6mcdVEeqRbODwkUVEZlKyBbSxwJtQeZUvuCv/zM1w49rbDh3KmMyjyR+FyIV0QkQ0VdLWBZ4aBn+qoaajA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        section {
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            /* border: 2px solid black;
+             width: 400px;
+             height: 300px; */
+        }
+
+        .mainbox {
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            /* background-color: red; */
+
+        }
+
+        .img {
+
+            border-radius: 30px;
+        }
+
+        /* .i{
+            justify-content: space-between;
+            gap: 20px;
+        } */
+    </style>
 </head>
 
 <body>
 
     <section>
         <div class="mainBox">
-            <div class="box"></div>
-            <button onclick="setStyleOnBox('50%')">50%</button>
+            <div class="box">
+                
+                <input type="text"placeholder="Enter the Image">
+                <input type="text"placeholder="Enter the Name">
+                <input type="text"placeholder="Enter the Designation">
+                <input type="text"placeholder="Enter the Facebook url">
+                <input type="text"placeholder="Enter the twitter url">
+                <input type="text"placeholder="Enter the Linkdin url">
+                <input type="text"placeholder="Enter the Github url"> <br>
+                <button onclick="setStyleOnBox('50%')">Show</button>
+            </div>
+
+            <div class="box2"></div>
+
+            <img src="" width="200" height="200" alt="">
+            <h1>Devansh Rathi</h1> <br>
+            <h3>Software developer</h3>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-github"></i> <br>
+
 
         </div>
     </section>
+
     <script>
+        document.getElementsByTagName("img")[0].src = "https://images.unsplash.com/photo-1592009309602-1dde752490ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+        
+        document.getElementsByTagName('input')[0].text
+        document.getElementsByTagName('input')[1].text
+        document.getElementsByTagName('input')[2].text
+        document.getElementsByTagName('input')[3].text
+        document.getElementsByTagName('input')[4].text
+        document.getElementsByTagName('input')[5].text
+        document.getElementsByTagName('input')[6].text
+        
+        
+        
         function setStyleOnBox(radius) {
             let box = document.getElementsByTagName('div')[1]
             box.style.borderRadius = radius
-        
+
+            //   document.getElementsByTagName("img")[0].src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s"
+
+        }
+        function setStyleOnBox(radius) {
+            let box = document.getElementsByTagName('div')[1]
+            box.style.borderRadius = radius
         }
 
 
