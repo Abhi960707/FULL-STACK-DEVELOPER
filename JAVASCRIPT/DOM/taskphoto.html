@@ -16,8 +16,8 @@
         }
 
 
-        section {
-            /* display: flex; */
+       section {
+            /* display: flex;  */
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -29,13 +29,26 @@
 
         .mainbox {
             border: 2px solid black;
-            width: 300px;
-            height: 300px;
+            width: 800px;
+            height: 500px;
+            display: flex;
         }
 
         .box {
-            display: flex;
+            /* display: flex; */
             /* background-color: red; */
+            width: 200px;
+            height: 500px;
+            border: 2px solid black;
+            text-align: center;
+            gap: 10px;
+        }
+        .box2{
+            width: 800px;
+            height: 400px;
+            /* margin-bottom: 300px; */
+   /* border: 2px solid black; */
+   text-align: center;
 
         }
 
@@ -43,6 +56,7 @@
 
             border-radius: 30px;
         }
+       
 
         /* .i{
             justify-content: space-between;
@@ -53,21 +67,21 @@
 
 <body>
 
-    <section>
+    <section>/
         <div class="mainBox">
             <div class="box">
                 
-                <input type="text"placeholder="Enter the Image">
+                <input type="text"placeholder="Enter the Image"> 
                 <input type="text"placeholder="Enter the Name">
                 <input type="text"placeholder="Enter the Designation">
                 <input type="text"placeholder="Enter the Facebook url">
                 <input type="text"placeholder="Enter the twitter url">
                 <input type="text"placeholder="Enter the Linkdin url">
                 <input type="text"placeholder="Enter the Github url"> <br>
-                <button onclick="setStyleOnBox('50%')">Show</button>
-            </div>
-
-            <div class="box2"></div>
+                <button onclick="Stylebox()" style="border-radius: 10px;">Show</button>
+                 
+          
+            <div class="box2">
 
             <img src="" width="200" height="200" alt="">
             <h1>Devansh Rathi</h1> <br>
@@ -77,9 +91,10 @@
             <i class="bi bi-linkedin"></i>
             <i class="bi bi-github"></i> <br>
 
-
+  </div>
         </div>
-    </section>
+
+    <!-- </section> -->
 
     <script>
         document.getElementsByTagName("img")[0].src = "https://images.unsplash.com/photo-1592009309602-1dde752490ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
@@ -94,9 +109,12 @@
         
         
         
-        function setStyleOnBox(radius) {
+        function Stylebox() {
             let box = document.getElementsByTagName('div')[1]
             box.style.borderRadius = radius
+
+             let imgURL = document.getElementsByTagName('input')[0].value
+        document.getElementsByTagName('img')[0].src = imgURL
 
             //   document.getElementsByTagName("img")[0].src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SRRmhH4X5N2e4QalcoxVbzYsD44C-sQv-w&s"
 

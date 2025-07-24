@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Montserrat", sans-serif;
+        }
+        :root {
+             --bs-primary: #0d6efd;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            /* background-color: gray; */
+            /* width: 500px; */
+            box-shadow: 0px 0px 5px gray;
+            flex-basis: 400px;
+            height: 480px;
+            border-radius: 30px;
+        }
+
+        .box2 {
+           background: linear-gradient(blue 0%, blue 30%, white 30%, white 100%); 
+            box-shadow: 0px 0px 5px gray;
+
+        }
+
+        .profile-img {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .atual-img-box {
+            height: 150px;
+            width: 150px;
+            background-color: gray;
+            border-radius: 50%;
+            border: 5px solid blue;
+            margin-top: 40px;
+        }
+
+        .atual-img-box img {
+            border: 3px solid white;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .sub-msg {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .comments {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .name-role {
+            height: 100px;
+            /* background-color: aqua; */
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .icon .bi-facebook {
+            background-color: blue;
+            border-radius: 50%;
+            padding: 5px 7px;
+            color: white;
+        }
+
+        .icon .bi-twitter {
+            background-color: rgb(107, 191, 224);
+            border-radius: 50%;
+            padding: 5px 7px;
+            color: white;
+        }
+
+        .icon .bi-instagram {
+            background-color: rgb(229, 52, 52);
+            border-radius: 50%;
+            padding: 5px 7px;
+            color: white;
+        }
+
+        .icon .bi-github {
+            background-color: black;
+            border-radius: 50%;
+            padding: 5px 7px;
+            color: white;
+        }
+
+        .box2 {
+            display: none;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 50px 20px 30px 50px;
+        }
+
+        .box1 input {
+            border-radius: 10px;
+            width: 300px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        .box1 button {
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class=" box box1">
+            <ul>
+                <li><input type="text" value="" placeholder="Enter Image URL" class="form-control mb-3"></li>
+                <li><input type="text" value="" placeholder="Enter Your Name" class="form-control mb-3"></li>
+                <li><input type="text" value="" placeholder="Enter Your Role" class="form-control mb-3"></li>
+                <li><input type="text" value="" placeholder="Enter Facebook Id" class="form-control mb-3"></li>
+                <li><input type="text" value="" placeholder="Enter Twitter Id" class="form-control mb-3"></li>
+                <li><input type="text" value="" placeholder="Enter Instagram Id" class="form-control mb-3"></li>
+                <li><input type="text" value="" placeholder="Enter GitHub Id" class="form-control mb-3"></li>
+                <li class="text-center ">
+                    <button onclick="submitAlltData()" class="btn btn-primary" style="border-radius: 20px;">Submit</button>
+                </li>
+            </ul>
+        </div>
+        <div class="box box2">
+            <div class="profile-img">
+                <div class="atual-img-box">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="name-role-icon">
+                <div class="name-role">
+                    <h2></h2>
+                    <h6></h6>
+                </div>
+                <div class="icon">
+                    <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                    <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="" target="_blank"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="sub-msg">
+                <div class="sub">
+                    <button onclick="" class="btn btn-primary " style="border-radius: 20px;" >Subscribe </button>
+                </div>
+                <div class="msg">
+                    <button onclick="" class="btn btn-primary" style="border-radius: 20px;">Message</button>
+                </div>
+            </div>
+            <div class="comments">
+
+                <p><i class="bi bi-heart"></i><span> 60.4K</span></p>
+                <p>|</p>
+                <p><i class="bi bi-chat"></i></i><span> 20K</span></p>
+                <p>|</p>
+                <p><i class="bi bi-share"></i></i><span> 12.4K</span></p>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script>
+
+    function submitAlltData() {
+        let imgURL = document.getElementsByTagName('input')[0].value
+        document.getElementsByTagName('img')[0].src = imgURL
+
+        let vloggerNm = document.getElementsByTagName('input')[1].value
+        document.getElementsByTagName('h2')[0].innerText = vloggerNm
+
+        let domin = document.getElementsByTagName('input')[2].value
+        document.getElementsByTagName('h6')[0].innerText = domin
+
+        let fbID = document.getElementsByTagName('input')[3].value
+        document.getElementsByTagName('a')[0].href = fbID
+
+        let twitter = document.getElementsByTagName('input')[4].value
+        document.getElementsByTagName('a')[0].href = twitter
+
+        let insta = document.getElementsByTagName('input')[5].value
+        document.getElementsByTagName('a')[0].href = insta
+
+        let gitHub = document.getElementsByTagName('input')[6].value
+        document.getElementsByTagName('a')[0].href = gitHub
+
+        document.getElementsByTagName('div')[1].style.display = "block"
+        document.getElementsByTagName('div')[0].style.display = "none"
+
+
+    } 
+</script>
+
+</html>
