@@ -1,0 +1,114 @@
+<!-- Today's task :24/07/25
+
+You are given a <select> element with a list of animal options. Each option has a value that is a URL to an image of that animal.
+
+Write a JavaScript function that will:
+
+Display the corresponding animal image in an <img> tag when an option is selected. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Animal with multiple button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            text-align: center;
+            margin-top: 300px;
+            /* display: flex; */
+          gap: 20px;
+        }
+        .box2{
+            margin-left: 200px;
+           margin-top: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="box">
+
+        <select name="" id="">
+         <option value="">List of Animal</option>
+          
+            <option value="https://static.vecteezy.com/system/resources/previews/026/525/162/non_2x/lion-animal-isolated-photo.jpg">Lion</option>
+            <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKE8h_W0j8X-oxeLDd65GyNXJGKgaf61NoNg&s">Tiger</option>
+            <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi2tE4BUVcJ0sMBwsaWO_tK4aAYAQSQ9BA6Q&s">Elephant</option>
+            <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMEi0diZGcKUOyH_dS1wjOz8fMvxwJ8nEIyw&s">Horse</option>
+            <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq1DTP4rgrrCcn-MRjnr5WD0OxZGwdGwTTRA&s">Cat</option>
+            <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzn3HWOxRVDzJuE0KoB7tAMLYZzMab_9142g&s">Dog</option> 
+        </select> <br>
+
+        <!-- <input type="text" placeholder="Enter Image Url"> -->
+          <button onclick="showthisImage()">Lion</button>
+ <button onclick="showthisImage1()">Tiger</button>
+  <button onclick="showthisImage2()">Elephant</button><br>
+   <button onclick="showthisImage3()">Horse</button>
+    <button onclick="showthisImage4()">Cat</button>
+<button onclick="showthisImage5()">Dog</button><br>
+
+    </div>
+    <div class="box2">
+        <img src="" width="500" height="350" alt="">
+        </div>
+<!-- <img src="" width="400" height="250" alt=""> -->
+
+    <script>
+
+        function showthisImage() {
+           let imgUrlchange = document.getElementsByTagName('option')[1].value
+         document.getElementsByTagName('img')[0].src = imgUrlchange
+
+//           let imgUrlchange1 = document.getElementsByTagName('option')[2].value
+//          document.getElementsByTagName('img')[0].src = imgUrlchange1
+
+//  let imgUrlchange2 = document.getElementsByTagName('option')[3].value
+//          document.getElementsByTagName('img')[0].src = imgUrlchange2
+
+//  let imgUrlchange3 = document.getElementsByTagName('option')[4].value
+//          document.getElementsByTagName('img')[0].src = imgUrlchange3
+
+        }
+         function showthisImage1() {
+           let imgUrlchange = document.getElementsByTagName('option')[2].value
+         document.getElementsByTagName('img')[0].src = imgUrlchange
+
+        }
+         function showthisImage2() {
+           let imgUrlchange = document.getElementsByTagName('option')[3].value
+         document.getElementsByTagName('img')[0].src = imgUrlchange
+
+        }
+         function showthisImage3() {
+           let imgUrlchange = document.getElementsByTagName('option')[4].value
+         document.getElementsByTagName('img')[0].src = imgUrlchange
+
+        }
+         function showthisImage4() {
+           let imgUrlchange = document.getElementsByTagName('option')[5].value
+         document.getElementsByTagName('img')[0].src = imgUrlchange
+
+        }
+         function showthisImage5() {
+           let imgUrlchange = document.getElementsByTagName('option')[6].value
+         document.getElementsByTagName('img')[0].src = imgUrlchange
+
+        }
+
+
+        
+
+    
+    </script>
+</body>
+
+</html>

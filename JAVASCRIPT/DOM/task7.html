@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* section{
+            text-decoration: line-through;
+        } */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+        section {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+
+        textarea {
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+            font-size: 1.5rem;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+
+        .box {
+            text-align: center;
+        }
+
+
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 7px;
+            border: 1px solid gray;
+            cursor: pointer;
+        }
+
+
+        input {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="mainBox">
+            <div class="box">
+                <textarea name="" id=""></textarea>
+                <div class="btns">
+                    <button onclick="setColorOnText(innerText)">Red</button>
+                    <button onclick="setColorOnText(innerText)">Green</button>
+                    <button onclick="setColorOnText(innerText)">Yellow</button><br>
+                    <button onclick="setLineOnText(innerText)">Underline</button>
+                    <button onclick="setLineOnText(innerText)">Overline</button>
+                    <button onclick="setLineOnText('line-through')">Line through </button>
+                    <br>
+                    <input type="text" placeholder="Find word">
+                    <input type="text" placeholder="Replace word">
+                    <button onclick="replaceWord()">Replace</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function setColorOnText(colorName) {
+            document.getElementsByTagName('textarea')[0].style.color = colorName
+        }
+
+
+        function setLineOnText(lineName) {
+            document.getElementsByTagName('textarea')[0].style.textDecoration = lineName
+        }
+
+
+        function replaceWord() {
+            let textareaWord = document.getElementsByTagName('textarea')[0]
+            console.log(textareaWord.value)
+        }
+    </script>
+</body>
+
+</html>
