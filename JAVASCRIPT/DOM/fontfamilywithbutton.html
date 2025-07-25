@@ -70,7 +70,7 @@
             <div class="box">
                 <textarea name="" id=""></textarea>
                 <div class="btns">
-                    <select name="" id="">
+                    <select name="" id="" onchange="fontapply(value)"> //call the
                         <option selected disabled>-- Select Font Family --</option>
                         <option value="Dancing Script">Dancing Script</option>
                         <option value="Mukta">Mukta</option>
@@ -83,7 +83,7 @@
                         <option value="Playwrite AU SA">Playwrite AU SA</option>
                     </select><br>
 
-                    
+
                     <button onclick="setColorOnText(innerText)">Red</button>
                     <button onclick="setColorOnText(innerText)">Green</button>
                     <button onclick="setColorOnText(innerText)">Yellow</button><br>
@@ -101,6 +101,13 @@
 
 
     <script>
+        //All changes in fontFamily using textarea tag in this output
+function fontapply(changeFont){
+    document.getElementsByTagName('textarea')[0].style.fontFamily=changeFont
+
+
+}
+
         function setColorOnText(colorName) {
             document.getElementsByTagName('textarea')[0].style.color = colorName
         }
