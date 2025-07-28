@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal list One button</title>
+</head>
+
+<body>
+    <select id="animal-select">
+        <option value="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8xNV9waG90b19vZl9hX2RvZ19ydW5uaW5nX3dpdGhfb3duZXJfYXRfcGFya19lcF9mM2I3MDQyZC0zNWJlLTRlMTQtOGZhNy1kY2Q2OWQ1YzQzZjlfMi5qcGc.jpg">
+            Dog</option>
+        <option value="https://i.pinimg.com/736x/b2/97/1c/b2971cb7fda3b9d1eb4ce17281ec304f--siberian-tiger-bengal-tiger.jpg">Cat</option>
+        <option value="https://tse4.mm.bing.net/th/id/OIP.qLc7CKA1SnBvANPyTe5zeAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">Bird</option>
+    </select>
+
+    <img id="animal-image" src="" width="300" height="300"  alt="Selected Animal">
+
+    <script>
+        let animalSelect = document.getElementById('animal-select');
+        let animalImage = document.getElementById('animal-image');
+
+        animalSelect.addEventListener('change', (e) => {
+            let selectedValue = e.target.value;
+            animalImage.src = selectedValue;
+        });
+
+    </script>
+</body>
+
+</html>

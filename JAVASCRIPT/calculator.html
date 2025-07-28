@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            height: 100%;
+            width: 100%;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .mainbox {
+            height: 410px;
+            width: 370px;
+            border: 2px;
+            background-color: rgb(119, 117, 115);
+            border: 2px solid black;
+            /* margin: 100px;
+        padding: 230px; */
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin-top: 200px;
+            margin-left: 600px;
+            border-radius: 20px;
+
+        }
+
+        /* .box{
+       
+    } */
+        input {
+            width: 80%;
+            height: 60px;
+            margin-top: 20px;
+            padding: 6px;
+            border-radius: 20px;
+            background-color: rgb(97, 159, 159);
+            font-size: 35px;
+            text-align: right;
+        }
+
+        button {
+            width: 60px;
+            height: 30px;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 3px 5px 2px 1px;
+            border-radius: 50px;
+            /* background-color: rgb(63, 174, 174); */
+        }
+
+        .new {
+            background-color: aqua;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .new1 {
+            background-color: orange;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .new2 {
+            height: 35px;
+            border-radius: 10px;
+            box-shadow: 1px 1px;
+            /* margin-right: 100px; */
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="mainbox">
+            <h1>Abhi's Calculator</h1>
+            <div class="box">
+                <input type="text"> <br>
+                <button onclick="getNumber(innerText)">7</button>
+                <button onclick="getNumber(innerText)">8</button>
+                <button onclick="getNumber(innerText)">9</button>
+                <button onclick="getNumber(innerText)">/</button> <br>
+
+                <button onclick="getNumber(innerText)">4</button>
+                <button onclick="getNumber(innerText)">5</button>
+                <button onclick="getNumber(innerText)">6</button>
+                <button onclick="getNumber(innerText)">*</button> <br>
+
+                <button onclick="getNumber(innerText)">1</button>
+                <button onclick="getNumber(innerText)">2</button>
+                <button onclick="getNumber(innerText)">3</button>
+                <button onclick="getNumber(innerText)">-</button> <br>
+
+                <button onclick="getNumber(innerText)">0</button>
+                <button onclick="getNumber(innerText)">.</button>
+                <button onclick="getNumber(innerText)" class="new">+</button>
+                <button class="new1" onclick="equalTo()">=</button> <br>
+
+                <button class="new2" onclick="resetBtn()">Reset</button>
+                 <button class="new2" onclick="deleteBtn()">Delete</button>
+
+            </div>
+        </div>
+        <script>
+            function getNumber(e) {
+                let result = document.getElementsByTagName('input')[0].value
+                document.getElementsByTagName('input')[0].value += e
+            }
+
+            function equalTo() {
+                let result = document.getElementsByTagName('input')[0].value
+                document.getElementsByTagName('input')[0].value = eval(result)
+            }
+
+            function resetBtn() {
+                let result = document.getElementsByTagName('input')[0].value = ''
+
+            }
+            // function deleteBtn(){
+            //         let result = document.getElementsByTagName('input')[0].value =
+            // }
+            function deleteBtn() {
+    let result = document.getElementsByTagName('input')[0];
+   result.value = result.value.slice(0, -1); // Remove last character
+}
+        </script>
+    </section>
+
+</body>
+
+</html>
