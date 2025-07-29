@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+    <input type="text" name="" placeholder="Image Name">
+    <input type="text" name="" placeholder="Image Url">
+    <button onclick="createOption()">Create Option</button>
+    <select name="" id="" onchange="showImg()">
+        <option value="selected disabled">-------Select Option-------</option>
+       
+    </select>
+    </div>
+
+    <div class="img">
+    <img src="" width="200px" height="200px" alt="">
+    </div>
+
+    <script>
+        function createOption(){
+            let name = document.getElementsByTagName('input')[0].value
+            let url = document.getElementsByTagName('input')[1].value
+            let select = document.getElementsByTagName('select')[0]
+            select.innerHTML += `<option value = "${url}">${name}</option>`
+            // document.getElementsByTagName('input')[0].value = ''
+            // document.getElementsByTagName('input')[1].value = ''
+        }
+
+        function showImg(){
+            let link = document.getElementsByTagName('select')[0].value
+            let image = document.getElementsByTagName('img')[0]
+            image.src = link
+            image.style.display = 'block'
+        }
+    </script>
+</body>
+</html>

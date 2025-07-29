@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: math;
+        }
+
+
+        section{
+            display: flex;
+            justify-content: space-evenly;
+            height: 100vh;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+
+        select,input,button{
+            width: 250px;
+            border-radius: 7px;
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 5px 0px;
+        }
+
+
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <div class="inputBox">
+            <input type="text" placeholder="Enter Option Name" id="name"><br>
+            <input type="text" placeholder="Enter Url" id="url"><br>
+            <button onclick="createOption()">Create Option</button>
+        </div>
+        <div class="selectBox">
+            <select name="" id="choose-img" onchange="showImage(value)">
+                <option disabled selected>-- Select Image --</option>
+            </select>
+        </div>
+        <div class="imgBox">
+            <img src="" id="show-image" alt="">
+        </div>
+    </section>
+
+
+   
+    <script>
+        function createOption(){
+            let name = document.getElementById('name').value
+            let url = document.getElementById('url').value
+            let selectTag = document.getElementById('choose-img')
+            selectTag.innerHTML += `
+            <option value="${url}">${name}</option>
+            `
+        }
+
+
+        function showImage(imgUrl){
+            document.getElementById('show-image').src = imgUrl
+        }
+    </script>
+</body>
+
+
+</html>
+
+
