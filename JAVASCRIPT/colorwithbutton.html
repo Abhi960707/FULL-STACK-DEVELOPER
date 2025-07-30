@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <!-- <button class="color-btn" onclick="demo(innerText)">Red</button> -->
+    <button class="color-btn">Red</button>
+    <button class="color-btn">Green</button>
+    <button class="color-btn" value="hii im value">Yellow</button>
+    <button class="color-btn">Gray</button>
+    <button class="color-btn">Purple</button>
+    <button class="color-btn">Violet</button>
+    <button class="color-btn">Blue</button>
+    <button class="color-btn">Black</button>
+    <button class="color-btn">Aqua</button>
+    <script>
+        let allBtns = document.querySelectorAll('.color-btn')
+
+
+        for (let i = 0; i < allBtns.length; i++) { //show all buttons linking with length count
+            console.log(document.querySelectorAll('.color-btn')[i])  //This is show all tag with discription ex:-  <button class="color-btn">Red</button>
+            // document.querySelectorAll('.color-btn')[i].addEventListener('click',function(){
+            allBtns[i].addEventListener('click', function () {
+                console.log('Hii Im Button')  
+                console.log(event.target.value)
+                // console.log(this.innerText)
+                console.log(allBtns[i].innerText)
+            })
+        }
+    </script>
+</body>
+
+
+</html>

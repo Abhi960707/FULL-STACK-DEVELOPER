@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <!-- <button ondblclick="demoFun()">click me</button> -->
+    <button>click me</button>
+    <button>Hover me</button>
+    <button>Mouse Leave</button>
+    <script>
+        let btn = document.querySelector('button')
+        console.log(btn)
+
+        //Syntax in addEventListener means dblclik is event name & Name,Anonymous function,Arrow function is upper side declare function name
+        // btn.addEventListener('Event Name',functionName)
+        btn.addEventListener('dblclick', demoFun)
+        function demoFun() {
+            alert('Hii Im Demo')
+        }
+
+
+        let hoverBtn = document.querySelectorAll('button')[1]
+        // hoverBtn.addEventListener('mouseenter', demoFun)
+
+
+        let leaveBtn = document.querySelectorAll('button')[2]
+        leaveBtn.addEventListener('mouseleave', function () {
+            alert('Mouse leave')
+        })
+    </script>
+</body>
+
+
+</html>
