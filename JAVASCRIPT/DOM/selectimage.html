@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select option using show image</title>
+</head>
+
+<body>
+
+
+
+    <select name="" id="" onchange="imgapply(value)">
+        <option value="">---select image---</option>
+        <option
+            value="https://tse3.mm.bing.net/th/id/OIP.KSFGHRzNGO4QNuc0KQOrqAHaLJ?w=1862&h=2804&rs=1&pid=ImgDetMain&o=7&rm=3">
+            Cat</option>
+        <option value="https://th.bing.com/th/id/OIP.oWMkL8YnI6XsiKdo-CN9KQHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3">
+            Dog</option>
+        <option
+            value="https://tse3.mm.bing.net/th/id/OIP.jL-u5GeqAabatJY7T0DsNwHaF6?w=650&h=519&rs=1&pid=ImgDetMain&o=7&rm=3">
+            Tiger</option>
+        <option value="https://wallpaperaccess.com/full/427061.jpg">Lion</option>
+        <option value="https://tse1.mm.bing.net/th/id/OIP.wdD-7S2VsjfT6ReBFqTQvwHaEo?rs=1&pid=ImgDetMain&o=7&rm=3">Horse
+        </option>
+
+
+    </select>
+    <img src="" width="250" height="300" alt="">
+    <script>
+
+        function imgapply(changeimage) {
+            // let changeimage=document.getElementsByTagName('select')[0].value //add this function changeimage()
+            document.getElementsByTagName('img')[0].src = changeimage
+
+
+        }
+    </script>
+
+</body>
+
+</html>
