@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h1>hi iam javscript</h1>
+
+<img src="" width="400" height="500" alt="">
+
+<script>
+// Attribute:= 1.setAttribute
+//             2.getAttribute
+//             3.removeAttribute
+
+
+//Set all Attribute by using Tagname.setAttribute  je kay add karayache te Ex:- let head1=document.querySelector('h1');     head1.setAttribute('class','head-new'))
+
+
+    let head1=document.querySelector('h1')
+    head1.setAttribute('class','head-new')
+ head1.setAttribute('id','head1')    
+head1.setAttribute('style','background-color:orange;color:green;')
+head1.setAttribute('title','hii im😊👑')
+
+head1.innerText='Captain Cool 🏏🏏👑😍'
+head1.setAttribute('value','https://e0.pxfuel.com/wallpapers/869/136/desktop-wallpaper-msdhoni-ms-dhoni-csk.jpg')
+
+
+//Get all Attribute
+// let imgUrl=head1.getAttribute('value')
+
+let imgTag =document.querySelector('img')
+imgTag.setAttribute('src',head1.getAttribute('value'))
+
+
+
+//Remove the set attribute by using ,removeAttribute('je delete karayache te')
+
+head1.removeAttribute('class')
+head1.removeAttribute('id')
+// imgTag.removeAttribute('width')
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>
