@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Bulb Controller</title>
+  <style>
+    #bulb-controller {
+      text-align: center;
+    }
+    #bulb {
+      width: 200px;
+      height:300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="bulb-controller">
+    <img id="bulb" src="https://tse4.mm.bing.net/th/id/OIP.dTmDdvOWEO-0s7t0Z3Yr4gAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Bulb" width="100">
+    <p id="label">Check Bulb Updation </p>
+    <input type="text" id="colorInput" placeholder="Enter color (red)">
+    <input type="text" id="labelInput" placeholder="Enter label">
+    <button id="onBtn">Turn On</button>
+    <button id="offBtn">Turn Off</button>
+    <button id="setColorBtn">Set Color</button>
+    <button id="setLabelBtn">Set Label</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <script>
+    class BulbController {
+      constructor() {
+        this.bulb = document.getElementById('bulb');
+        this.label = document.getElementById('label');
+        this.colorInput = document.getElementById('colorInput');
+        this.labelInput = document.getElementById('labelInput');
+        this.isOn = false;
+
+        document.getElementById('onBtn').addEventListener('click', () => this.turnOn());
+        document.getElementById('offBtn').addEventListener('click', () => this.turnOff());
+        document.getElementById('setColorBtn').addEventListener('click', () => this.setColor());
+        document.getElementById('setLabelBtn').addEventListener('click', () => this.setLabel());
+        document.getElementById('resetBtn').addEventListener('click', () => this.reset());
+      }
+
+      get labelText() {
+        return this.label.textContent;
+      }
+
+      set labelText(text) {
+        this.label.textContent = text;
+      }
+
+      turnOn() {
+        this.bulb.src = 'https://www.w3schools.com/js/pic_bulbon.gif';
+        this.isOn = true;
+      }
+
+      turnOff() {
+        this.bulb.src = 'https://www.w3schools.com/js/pic_bulboff.gif';
+        this.isOn = false;
+      }
+
+      setColor() {
+        const color = this.colorInput.value;
+        if (this.isOn) {
+          this.bulb.style.filter = `hue-rotate(${this.getHueRotateValue(color)})`;
+        }
+      }
+
+      setLabel() {
+        this.labelText = this.labelInput.value;
+      }
+
+      reset() {
+        this.turnOff();
+        this.labelText = 'Bulb Label';
+        this.colorInput.value = '';
+        this.labelInput.value = '';
+        this.bulb.style.filter = '';
+      }
+
+      getHueRotateValue(color) {
+        const colorMap = {
+          'red': 0,
+          'orange': 30,
+          'yellow': 60,
+          'green': 120,
+          'blue': 180,
+          'indigo': 210,
+          'violet': 270
+        };
+        return `${colorMap[color.toLowerCase()] || 0}deg`;
+      }
+    }
+
+    const controller = new BulbController();
+  </script>
+</body>
+</html>

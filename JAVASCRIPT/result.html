@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: math;
+        }
+
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+
+        input,
+        button {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 7px;
+            margin: 5px 0px;
+        }
+
+
+        table {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+
+        tr,
+        th,
+        td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+
+        th,td{
+            padding: 10px;
+        }
+
+
+        .fail{
+            background-color: rgb(242, 99, 99);
+        }
+
+
+        .avg{
+            background-color: rgb(247, 247, 102);
+        }
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <div class="box">
+            <div class="input-field">
+                <input type="text" placeholder="Student Name">
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Student Roll No">
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Science Marks">
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Maths Marks">
+            </div>
+            <div class="input-field">
+                <button>Add Student</button>
+            </div>
+        </div>
+        <div class="box">
+            <h3>All Students Result List</h3>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>Science</th>
+                    <th>Math</th>
+                    <th>Total</th>
+                </tr>
+                <tr class="fail">
+                    <td>1</td>
+                    <td>Pawan</td>
+                    <td>15</td>
+                    <td>35</td>
+                    <td>40</td>
+                    <td>30</td>
+                </tr>
+                <tr class="avg">
+                    <td>2</td>
+                    <td>Nikhil</td>
+                    <td>16</td>
+                    <td>50</td>
+                    <td>50</td>
+                    <td>40</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</body>
+
+
+</html>

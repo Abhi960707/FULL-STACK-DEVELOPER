@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Student Result Data</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: math;
+        }
+
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+
+        input,
+        button {
+            width: 200px;
+            padding: 12px;
+            border: 1px solid black;
+            border-radius: 7px;
+            margin: 5px 0px;
+        }
+
+
+        table {
+            border: 1px solid gray;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+
+        tr,
+        th,
+        td {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <div class="box">
+            <div class="input-field">
+                <input type="text" id="S_id" placeholder="Enter Id">
+            </div>
+            <div class="input-field">
+                <input type="text" id="S_no" placeholder="Student Roll No">
+            </div>
+            <div class="input-field">
+                <input type="text" id="S_name" placeholder="Student Name">
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="Sci_marks" placeholder="Science Marks">
+            </div>
+            <div class="input-field">
+                <input type="text" id="Math_marks" placeholder="Maths Marks">
+            </div>
+            <div class="input-field">
+                <button onclick="addInfo()">Add Student</button>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Students Marks Data</h3>
+            <table class="myTable">
+                <tr style="background-color: #36a1a1">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>Science</th>
+                    <th>Math</th>
+                    <th>Total</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        let colorType;
+        // let textColor;
+        function addInfo() {
+            let Id = document.getElementById('S_id').value
+            let studentName = document.getElementById('S_name').value
+            let studentRoll = document.getElementById('S_no').value
+            let scienceMarks = Number(document.getElementById('Sci_marks').value) // Number used to convert the value into number //
+            let mathMarks = Number(document.getElementById('Math_marks').value)
+            let total = scienceMarks + mathMarks
+
+            if (total < 30) {
+                colorType = 'rgb(255, 64, 64)'
+                textColor = 'white'
+
+            }
+            else if (total > 30 && total < 70) {
+                colorType = 'rgb(248, 248, 111)'
+                textColor = 'black'
+
+            }
+            else {
+                colorType = 'rgb(158, 249, 158)'
+                textColor = 'black'
+
+            }
+
+            let Table = document.getElementsByTagName('table')[0]
+            Table.innerHTML += `
+                <tr style="background-color:${colorType}; color: ${textColor}">
+                    <td>${Id}</td>
+                    <td>${studentName}</td>
+                    <td>${studentRoll}</td>
+                    <td>${scienceMarks}</td>
+                    <td>${mathMarks}</td>
+                    <td>${total}</td>
+                </tr>
+
+            `
+            document.getElementById('S_id').value = ''
+            document.getElementById('S_name').value = ''
+            document.getElementById('S_no').value = ''
+            document.getElementById('Sci_marks').value = ''
+            document.getElementById('Math_marks').value = ''
+        }
+    </script>
+</body>
+
+
+</html>
