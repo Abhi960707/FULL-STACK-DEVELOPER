@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+    <button id="btn">set name</button>
+
+    <script>
+
+// 1. Local Storage:-(i) Local storage is a permanent data store (until manually cleared) that persists even after the browser is closed and reopened.
+//                     (ii) localStorage stores data with no expiration time
+
+// 2. Session Storage:-(i) Session storage is a temporary data store that is cleared when the browser tab is closed.
+//                      (ii)  sessionStorage stores data until the browser tab is closed.
+
+// 3.JSON.stringify():-(i) converts a JavaScript object into a JSON-formatted string.
+//                     (ii) Only JSON.stringyfy() function show the format.  in a local storage or any one and only value-Type is understand
+
+// 4.JSON.parse():- (i) JSON.parse() converts a JSON string into a JavaScript object.
+//                 (ii) Means this method is a string but modify object //matlab JSON format ki string ko javascript object me badlata hai
+       
+        let arrvariable = []
+        let newBtn = document.querySelector('#btn')
+        newBtn.addEventListener('click', function () {
+            // console.log(num++)
+            let convert = JSON.stringify(num++)
+            arrvariable.push(num++)
+            // console.log(arrvariable)
+            localStorage.setItem('arrvariable', JSON.stringify(arrvariable)) ////Only JSON.stringyfy() function show the format.  in a local storage or any one and only value-Type is understand
+            console.log(typeof convert)
+            localStorage.setItem('incrementNum', convert)  //SetItem or set method using this statement
+            sessionStorage.setItem('incrementNum', convert)
+        })
+
+
+        let newArr = localStorage.getItem('arrvariable')//GetItem or Get method using this statement or show this information
+        console.log(JSON.parse(newArr)) //Means this method is a string but modify object //matlab JSON format ki string ko javascript object me badlata hai
+        // JSON.parse() converts a JSON-formatted string into a JavaScript object.
+
+        console.log(typeof newArr)  //used typeof your understanding used what are used any type like a string,array,etc
+
+
+        // localStorage.removeItem('arrvariable')  //Remove the particular class ,id ,etc like a //Remove or Delete Method applied on any class name or any field ex:-class,id,like a style-width,color,background color 
+        // localStorage.removeItem('incrementNum') //Remove or Delete Method applied on any class name or any field ex:-class,id,like a style-width,color,background color
+
+        // This is a example
+        
+            let jsonString = '{"name": "Abhi", "age": 21,"city":"Tembhurni madha"}';
+        let obj = JSON.parse(jsonString);
+
+        console.log(obj.name); 
+
+    </script>
+</body>
+
+
+</html>

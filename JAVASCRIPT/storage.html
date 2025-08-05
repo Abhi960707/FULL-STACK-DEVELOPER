@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local & Session Storage</title>
+</head>
+
+
+<body>
+    <script>
+
+// 1. Local Storage:-(i) Local storage is a permanent data store (until manually cleared) that persists even after the browser is closed and reopened.
+//                     (ii) localStorage stores data with no expiration time
+
+// 2. Session Storage:-(i) Session storage is a temporary data store that is cleared when the browser tab is closed.
+//                      (ii)  sessionStorage stores data until the browser tab is closed.
+
+// 3.JSON.stringify():-(i) converts a JavaScript object into a JSON-formatted string.
+//                     (ii) Only JSON.stringyfy() function show the format.  in a local storage or any one and only value-Type is understand
+
+// 4.JSON.parse():- (i) JSON.parse() converts a JSON string into a JavaScript object.
+//                 (ii) Means this method is a string but modify object //matlab JSON format ki string ko javascript object me badlata hai
+
+
+
+        let user = {
+            name: 'User 1',
+            city: 'Mumbai',
+            age: 22
+        }
+
+
+        let convertData = JSON.stringify(user) //Only JSON.stringyfy() function show the format.  in a local storage or any one and only value-Type is understand
+
+
+        localStorage.setItem('user-data', convertData) //SetItem or set method using this statement
+        localStorage.setItem('user', "Abhijeet")
+        localStorage.setItem('newname', "Abhi narsale")
+
+
+        let userName = localStorage.getItem('user-data') //Get method applied
+        let originalData = JSON.parse(userName) //Means this method is a string but modify object //matlab JSON format ki string ko javascript object me badlata hai
+                                                // JSON.parse() converts a JSON-formatted string into a JavaScript object.
+        
+        console.log(originalData.age)
+
+
+        // localStorage.removeItem('user') //Remove or Delete Method applied on any class name or any field ex:-class,id,like a style-width,color,background color 
+        // localStorage.removeItem('user-data') //Remove or Delete Method applied on any class name or any field ex:-class,id,like a style-width,color,background color 
+        localStorage.removeItem('newname')
+    </script>
+</body>
+
+
+</html>

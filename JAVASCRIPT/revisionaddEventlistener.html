@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <button onclick="hiiImClickEvent()">click event</button>
+    <button id="btn" class="hiiimbtn" value="heloow">Hii Im Also Click Event</button>
+    <button class="btn">Banana</button>
+    <button class="btn">Kiwi</button>
+    <button class="btn" onclick="Thisisfruits">Grapes</button>
+    <button class="btn">Apple</button>
+    <button class="btn">Mango</button>
+
+
+    <button id="btn">set name</button>
+    <script>
+        let btn = document.querySelector('#btn') 
+        btn.title = 'Hellooo'
+
+
+        console.log(btn.getAttribute('title')) //GetAttribute the show informatoin
+        btn.removeAttribute('class')  //RemoveAttribute the class using this command
+        // btn.addEventListener('click', hiiImClickEvent)
+        btn.addEventListener('click', function () {  //used add EventListener and anonymous function
+            console.log('Hi im Click with anynomous')
+        })
+
+
+        function hiiImClickEvent() {
+            console.log('Hi im Click')
+        }
+
+
+        let fruitBtns = document.querySelectorAll('.btn')  //button tag class btn call this statement using .btn
+        for (let i = 0; i < fruitBtns.length; i++) {  //using for loop 
+            console.log(fruitBtns[i])
+            fruitBtns[i].addEventListener('click', function () {
+                console.log('hii im also clicked....😁', this.innerText)
+            })
+            fruitBtns[i].addEventListener('click', function (abhijeet) {
+                console.log('hii im clicked....😁', abhijeet.target)
+                abhijeet.target.style.color = 'Orange'    //used style by change color 
+                abhijeet.target.setAttribute('value', '🐒')   //set value in this statement
+                console.log(abhijeet.target.getAttribute('onclick'))
+            })
+        }
+</script>
+</body>
+</html>
+
