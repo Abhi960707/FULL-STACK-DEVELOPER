@@ -1,3 +1,4 @@
+let userIndex;
 let employeeList = [];
 
 
@@ -67,3 +68,33 @@ function deleteRow(index) {
     employeeList.splice(index, 1)
     showAllEmployees()
 }
+
+
+
+function sendDataForUpdate(index) {
+    document.querySelector('#uptName').value = employeeList[index].empName
+    document.querySelector('#uptEmail').value = employeeList[index].empEmail
+    document.querySelector('#uptPhone').value = employeeList[index].empPhone
+    document.querySelector('#uptCity').value = employeeList[index].empCity
+    userIndex = index
+}
+
+
+updateBtn.addEventListener('click', function () {
+    let name = document.querySelector('#uptName').value
+    let email = document.querySelector('#uptEmail').value
+    let phone = document.querySelector('#uptPhone').value
+    let city = document.querySelector('#uptCity').value
+
+
+    let empObj = {
+        empName: name,
+        empEmail: email,
+        empPhone: phone,
+        empCity: city
+    }
+
+
+    employeeList.splice(userIndex, 1, empObj)
+    showAllEmployees()
+})
