@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylecrud.css">
+</head>
+
+
+<body>
+    <!--
+        CRUD
+        Create, Read, Update, Delete
+    -->
+
+
+    <section>
+        <div class="mainBox">
+            <div class="formBox">
+                <div class="createForm">
+                    <h2>Create Employee</h2>
+                    <div class="inputField">
+                        <input type="text" placeholder="Enter Name" id="crtName">
+                    </div>
+                    <div class="inputField">
+                        <input type="text" placeholder="Enter Email" id="crtEmail">
+                    </div>
+                    <div class="inputField">
+                        <input type="text" placeholder="Enter Phone" id="crtPhone">
+                    </div>
+                    <div class="inputField">
+                        <input type="text" placeholder="Enter City" id="crtCity">
+                    </div>
+                    <div class="btnField">
+                        <button id="crtBtn" style="background-color: grey;">Create Employee</button>
+                    </div>
+                </div>
+                <div class="updateForm">
+                    <h2>Update Employee</h2>
+                    <div class="inputField">
+                        <input type="text" placeholder="Enter Name" id="uptName">
+                    </div>
+                    <div class="inputField">
+                        <input type="text" placeholder="Entera Email" id="uptEmail">
+                    </div>
+                    <div class="inputField">
+                        <input type="text" placeholder="Enter a Phone Number" id="uptPhone">
+                    </div>
+                    <div class="inputField">
+                        <input type="text" placeholder="Enter City Name" id="uptCity">
+                    </div>
+                    <div class="btnField">
+                        <button id="uptBtn" style="background-color: grey;">Update Employee</button>
+                    </div>
+                </div>
+            </div>
+            <div class="resultBox">
+                <div class="emptyBox">
+                    <img src="./photos/emptyboximg.gif" alt="">
+                    <!-- <img src="https://assets-v2.lottiefiles.com/a/0953d504-117d-11ee-aa49-1f149204cb5f/9uZcoEJaoF.gif" alt="">   -->
+                                                                                                                                    <!-- Direct link using browser photo    -->
+                    <h4>Empty All List</h4>
+                </div>
+               <div class="tableBox">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>City</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Email</td>
+                            <td>Phone</td>
+                            <td>City</td>
+                            <td>Action</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./script.js"></script>
+</body>
+
+
+</html>

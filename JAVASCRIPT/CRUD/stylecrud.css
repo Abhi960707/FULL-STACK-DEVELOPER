@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       background-color: rgb(210, 232, 147);
+}
+
+
+section .mainBox .formBox {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+      /* background-color: rgb(162, 165, 165); */
+}
+
+
+.createForm,
+.updateForm {
+    width: 35%;
+    text-align: center;
+}
+
+
+input {
+    width: 100%;
+    border: none;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+
+.inputField {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 7px;
+    margin: 5px 0px;
+}
+
+
+#uptBtn,
+#crtBtn {
+    width: 100%;
+    border: 1px solid rgb(27, 25, 25);
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    margin: 7px 0px;
+    cursor: pointer;
+}
+
+
+h2 {
+    background-color: orange;
+    margin: 5px 0px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+
+.resultBox{
+    padding: 0px 30px;
+}
+
+
+table{
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+table,tr{
+    border-collapse: collapse;
+}
+
+
+table,tr,th,td{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+
+.edit,.del{
+    font-size: 1rem;
+    padding: 7px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    color: white;
+}
+
+
+.edit{
+    background-color: rgb(123, 123, 239);
+}
+
+
+.del{
+    background-color: rgb(237, 108, 108);
+}
+
+
+img{
+    width: 20%;
+    height: 200px;
+}
+
+
+.emptyBox{
+    display: none;
+    text-align: center;
+}
