@@ -37,28 +37,25 @@
             document.getElementsByTagName('img')[3].src = imgurl3
         }
     </script> -->
+<input type="text" placeholder="Enter image URL">
+    <button onclick="urlimage()">Show image</button> <br><br>
 
-        <input type="text">
-    <button onclick="urlimage()">Show image</button> <br>
+    <div class="mainbox">
+        <img src="" width="200" height="200" alt="">
+        <img src="" width="200" height="200" alt="">
+        <img src="" width="200" height="200" alt="">
+        <img src="" width="200" height="200" alt="">
+    </div>
 
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-
-<h1>abhi</h1>
-<h1>abhi</h1>
-<h1>abhi</h1>
-<h1>abhi</h1>
-<h1>abhi</h1>
     <script>
-        function generateimage(){
-let url=document.getElementsByTagName('input')[0]
-let resultbox=document.getElementsByTagName('div')[2]
-resultbox.innerHTML +=
-        
-}
+        function urlimage() {
+            let imgurl = document.getElementsByTagName('input')[0].value;
+            let images = document.querySelectorAll('.mainbox img');
+
+            images.forEach(img => {
+                img.src = imgurl;
+            });
+        }
 
         
     </script>
