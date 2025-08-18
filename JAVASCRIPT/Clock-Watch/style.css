@@ -1,7 +1,60 @@
 *{
     margin: 0;
     padding: 0;
-font-family: Arial, Helvetica, sans-serif;
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+section{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.clockBox{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+
+.innerClock{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    font-size: 4.5rem;
+}
+
+
+.month{
+    text-align: end;
+    margin-top: 10px;
+}
+
+
+.week{
+    margin-bottom: 10px;
+}
+
+
+.week span{
+    font-weight: 100;
+    color: gray;
+    margin: 0px 10px;
+}
+
+
+.mainBox{
+    /* width: 50%; */
+    text-align: center;
+}
