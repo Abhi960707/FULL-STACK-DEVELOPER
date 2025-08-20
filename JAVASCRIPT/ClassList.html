@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Mango{
+            color: yellow;
+        }
+
+
+        .komal{
+            text-align: center;
+            color: gray;
+        }
+
+
+        .apple{
+            font-size: 2rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="apple banana kiwi grapes orange berry Mango">Heading 1</h1>
+    <button>toggle</button>
+    <script>
+        let h1Tag = document.querySelector('h1')
+        // console.log(h1Tag.classList[2])
+        // h1Tag.classList.add('Mango')
+        // h1Tag.classList.remove('kiwi')
+
+
+        let btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            h1Tag.classList.toggle('abhijeet')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar using list </title>
+    <!-- icon link-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: aqua;
+        }
+
+
+        ul {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            list-style: none;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        button {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        .bars {
+            display: none;
+        }
+
+
+        @media (max-width:700px) {
+            .bars {
+                display: block;
+            }
+
+
+            ul {
+                flex-direction: column;
+                position: absolute;
+                background: aqua;
+                width: 100%;
+                left: 0;
+                align-items: baseline;
+                padding: 20px 0px;
+                /* top: 45px; */
+                top: -220px;
+                transition-duration: .9s;
+                z-index: -1;
+            }
+
+
+            li {
+                margin-left: 30px;
+            }
+
+
+            .show-nav-list {
+                top: 45px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="list">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Career</a></li>
+            </ul>
+        </div>
+        <div class="bars">
+            <button id="bar">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
+
+
+    <script>
+        let btn = document.querySelector('#bar')
+        btn.addEventListener('click', function () {
+            let ul = document.querySelector('ul')
+            ul.classList.toggle('show-nav-list')
+        })
+    </script>
+</body>
+
+
+</html>
