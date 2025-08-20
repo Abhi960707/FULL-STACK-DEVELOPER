@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild </title>
+</head>
+<body>
+    <img src="" alt="">
+    <!--
+
+
+        <h1>Hello Javscript</h1> -> Tag
+        <h1></h1> -> Element
+        Hello Javscript -> Text Node
+
+
+    -->
+
+
+    <div class="box"></div>
+    <script>
+        let box = document.querySelector('.box')
+        let h1Tag = document.createElement('h1')
+        let imgTag = document.createElement('img')
+        let h1Text = document.createTextNode('Hiii im Text for h1')
+        // console.log(h1Tag)
+        // console.log(imgTag)
+        // console.log(h1Text)
+
+
+        imgTag.setAttribute('src','https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg')
+        imgTag.setAttribute('alt','Cat 🐱')
+
+
+        console.log(imgTag)
+
+
+        h1Tag.appendChild(h1Text)
+        box.appendChild(imgTag)
+        box.appendChild(h1Tag)
+    </script>
+</body>
+</html>
