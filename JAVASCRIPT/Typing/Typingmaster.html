@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Master In Text</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="mainBox">
+            <div class="setting">
+                <div class="selectTime">
+                    <select id="setTime">
+                        <option disabled selected>-- select time --</option>
+                        <option value="60">1 min</option>
+                        <option value="120">2 min</option>
+                        <option value="3">3 min</option>
+                        <option value="4">4 min</option>
+                        <option value="5">5 min</option>
+                    </select>
+                </div>
+                <div class="showText">
+                    <p id="text">Hello Javascript</p>
+                </div>
+                <div class="timerBox">
+                    <span id="timer">00:00</span>
+                    <button id="startBtn">Start</button>
+                </div>
+            </div>
+            <div class="resultBox">
+                <textarea name="" id="type" placeholder="Type here..."></textarea>
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
