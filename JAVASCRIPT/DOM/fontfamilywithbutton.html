@@ -84,7 +84,13 @@
                         <option value="Lato">Lato</option>
                         <option value="Macondo">Macondo</option>
                         <option value="Playwrite AU SA">Playwrite AU SA</option>
-                    </select><br>
+                    </select>
+                     <select id="color-type">
+                        <option selected disabled>-- Select Color Type --</option>
+                        <option value="background">Background Color</option>
+                        <option value="color">Color</option>
+                    </select>
+                    <br>
 
                     <input class="hero" type="text" placeholder="Color Button Name">
                     <button onclick="createButton()">CreateButton</button> <br>
@@ -125,6 +131,12 @@
 
         function setColorOnText(colorName) {
             document.getElementsByTagName('textarea')[0].style.color = colorName
+            // Thi format ifelse statement using the short code in upper lines.
+             // if (colorType == 'color') {
+            //     document.getElementsByTagName('textarea')[0].style.color = colorName
+            // } else {
+            //     document.getElementsByTagName('textarea')[0].style.backgroundColor = colorName
+            // }
         }
 
 
