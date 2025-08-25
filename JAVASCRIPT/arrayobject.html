@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let array = [
+   
+   obj= {
+        name:'abhijeet',
+        email:'abhijeet@gmail.com',
+        contact:84848484,
+        password:123456
+
+    }]
+    console.log(array)
+
+    let convert=JSON.stringify(array)//convrt data into string
+console.log(convert)
+
+ let newname=JSON.stringify(array)//convrt data into string
+console.log(convert)
+
+localStorage.setItem('data',convert)
+// localStorage.setItem('abhi',newname)
+let orgdata=JSON.parse(localStorage.getItem('data'))//Json.parse this is a method
+console.log(orgdata)
+
+// localStorage.removeItem(convert)
+localStorage.removeItem(data)
+// localStorage.removeItem()
+
+localStorage.removeItem('abhi')
+
+
+
+// setInterval(function(){
+// localStorage.setItem('data',convert)
+// }, 5000)                           //per 5 second repeated show using setInterval
+
+
+
+
+
+
+setTimeout(function(){
+localStorage.setItem('data',convert)
+}, 6000)                        //Only one time show using setTimeout      
+
+let num=0;
+let intervalid=setInterval(function(){
+    console.log(num++)
+
+},2000)
+clearInterval(intervalid)
+    </script>
+</body>
+</html>
