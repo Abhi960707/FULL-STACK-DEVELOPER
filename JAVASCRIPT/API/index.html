@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API USING ARROW METHOD</title>
+
+</head>
+
+<body>
+    <section>
+        <div class="mainbox">
+
+        </div>
+    </section>
+
+    <!-- Check the advance using index.json extension in linking the html code
+        by using the fetch method follow the this 3 line code check with script tag -->
+    <!-- <script>
+
+fetch('.index.json')
+.then(res=>res.json())
+.then(result=>console.log(result))
+
+
+    </script> -->
+
+    <script>
+        let mainbox = document.querySelector(".mainbox")
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then(res => {
+                for (let i = 0; i < res.length; i++) {
+                    mainbox.innerHTML += `
+        <div class="Listbox">
+            <ul>
+                      <li>${res[i].id}</li>
+                      <li>${res[i].name}</li>
+                      <li>${res[i].username}</li>
+                      <li>${res[i].address.city}</li>
+            </ul>
+            </div> 
+            
+            `
+                }
+            })
+
+    </script>
+</body>
+
+</html>
