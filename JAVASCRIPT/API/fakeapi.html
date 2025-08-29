@@ -1,0 +1,81 @@
+<!-- Used this link  https://fakestoreapi.com/products -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Api simple clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .main {
+            display: flex;
+            text-decoration: none;
+     
+
+        }
+
+        li {
+            list-style: none;
+            /* border-radius: 2px solid black; */
+        }
+
+        ul {
+            border: 2px solid black;
+            /* justify-content: space-between; */
+            margin: 10px;
+            padding: 10px;
+        }
+        /* img{
+            width: 300px;
+            height: 250px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- <div class="box"></div> -->
+        <img src="" alt="">
+    </div>
+
+    <!-- <script>  
+ let main= document.querySelector(".main")
+      fetch('fakeapi.json')
+            .then(response => response.json())
+            .then(result => console.log(result))
+    
+    </script> -->
+    <script>
+        let main = document.querySelector(".main")
+        fetch('https://fakestoreapi.com/products')  //this path used in refer this link https://fakestoreapi.com/docs
+            .then(res => res.json())
+            .then(res => {
+                for (let i = 0; i < res.length; i++) {
+                    main.innerHTML += `
+        <div class="List">
+            <ul>
+                <img src="${res[i].image}" alt="" height="300" width="350" >
+                      <li>${res[i].id}</li>
+                      <li>${res[i].title}</li>
+                      <li>${res[i].prize}</li>
+                      <li>${res[i].description}</li>
+                      <li>${res[i].category}</li> 
+                      </ul>
+            </div> 
+            
+            `
+                }
+            })
+
+    </script>
+</body>
+
+</html>
