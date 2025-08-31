@@ -1,0 +1,45 @@
+<!-- Used this link https://dictionaryapi.dev/ 
+                    https://api.dictionaryapi.dev/api/v2/entries/en/<word> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Dictionary using Words Api For Application</title>
+    <link rel="stylesheet" href="dictionary.css">
+</head>
+
+<body>
+    <!-- Compare The Array Of Object -->
+    <!-- Append child:- syntax: variable name.appendchild(another variable name)
+                        ex: definitionname.appendchild(pTag) -->
+
+
+    <section>
+        <div class="mainBox">
+            <div class="searchBox">
+                <input type="text" placeholder="Enter Word here..." id="input">
+                <button id="search">Search Word</button>
+            </div>
+            <div class="line"></div>
+            <div class="result">
+                <h3 class="word"></h3>
+                <div class="definationBox">
+                    <!--
+                    <p>Part of Speech : noun</p>
+                    <ul>
+                        <li></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./dictionary.js"></script>
+
+
+</body>
+
+</html>
