@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <!-- Promise:-condition yes or no -->
+     <!-- Example:- like app/web load not contain. ex:-facebook,insta,youtube  -->
+    <!-- Promise 3 state:- 1.pending:-
+                           2.resolve :-
+                           3.reject  :- -->
+<!-- First add resolve after reject/complete after cancle. parameter pass and perform the if-else statement-->
+<!-- any method():- first is true/ call using any-->
+ <!-- race method():- all reject call using race-->
+  <!-- allsettled():- all reject &resolve call using allsettled -->
+
+<!-- In JavaScript, the main Promise methods are:
+
+1.Promise.all() – Waits for all promises to resolve or any to reject.
+
+2.Promise.allSettled() – Waits for all promises to finish, regardless of success or failure.
+
+3.Promise.any() – Resolves as soon as one promise resolves (ignores rejections unless all reject).
+
+4.Promise.race() – Resolves or rejects as soon as the first promise settles.
+
+5.Promise.resolve() – Returns a promise resolved with a given value.
+
+6.Promise.reject() – Returns a promise rejected with a given reason.
+
+👉 Instance methods (used on a specific promise):
+
+then() – Handles a resolved value.
+
+catch() – Handles a rejected value.
+
+finally() – Runs code when the promise is settled (resolved or rejected). -->
+
+<!-- # This is a promise -->
+
+<!-- <script>
+let prom=new Promise((resolve,reject)=>{ //resolve,reject / complete,cancle yeh bhi modify kar sakte hai
+    if(12==11){
+        resolve('hii iom done')
+    }else{
+        reject('hii inm reject')
+    }
+}
+)
+prom.then((result)=>{
+    // console.log(result)
+    fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())            
+            .then(json=>console.log(json))
+}).catch((error)=>{
+alert('hii im alert👑👑')
+}).finally()
+console.log(prom)
+
+</script> -->
+<!-- ============================================================================================================================== -->
+
+<!-- # Promise.all methods -->
+
+<!-- <script>
+    let p1=Promise.resolve('First')
+    let p2=Promise.resolve('Second')
+    let p3=Promise.resolve('Three')
+let prom=Promise.all([p1,p2,p3])
+prom.then(res=console.log(res))
+prom.catch(err=console.log(err))
+
+</script> -->
+ <!-- =================================================================================================================================== -->
+
+<!-- #Promise.any method -->
+
+<!-- <Script>
+    const pErr=new Promise((resolve,reject)=>{
+        reject("always fails");  //all time reject
+    })
+
+      const pSlow=new Promise((resolve,reject)=>{
+        setTimeout(resolve,5000,"Done eventually");  //done with 5 second
+      });
+      
+      const pFast=new Promise((resolve,reject)=>{
+        setTimeout(resolve,2000,"Done quick");     //done with 2 second
+      });
+ 
+      Promise.any([pErr,pSlow,pFast]).then((value)=>{  //apply the any method like follow the pErr,pSlow,pFast 
+        console.log(value);
+      });
+
+</Script> -->
+<!-- =================================================================================================================================== -->
+
+<!-- #Promise .allSettled method -->
+<script>
+    let p1=Promise.resolve('✅done the process')
+    let p2=Promise.resolve('❌not found the process')
+    
+    Promise.allSettled([p1,p2])
+    .then(res=>console.log(res))
+</script>
+
+</body>
+</html>
