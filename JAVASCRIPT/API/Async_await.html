@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronization & Asynchronization</title>
+</head>
+
+
+<body>
+    <!-- Synchronization:- 1.step by step perform
+                           2.Default behaviour for read the data
+                           Ex:-onedrive or drive sync the data option
+        
+         Asynchronization:-1.Randomely read the data by using hold for particularr time
+                           Ex:-onedrive 1 year complete notification .this is a Asynchronization.                -->
+    <script>
+        console.log(1)
+        console.log(2)
+        console.log(3)
+        console.log(4)
+        async function showNum() {
+            await console.log(5)
+            // fetch('./index.json')
+            //     .then(res => res.json())
+            //     .then(res => console.log(res))
+            console.log(6)
+        }
+        console.log(7)
+        showNum()
+        console.log(8)
+        console.log(9)
+        console.log(10)
+    </script>
+</body>
+
+
+</html>
