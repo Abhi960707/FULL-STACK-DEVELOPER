@@ -68,7 +68,7 @@ console.log(prom)
     let p1=Promise.resolve('First')
     let p2=Promise.resolve('Second')
     let p3=Promise.resolve('Three')
-let prom=Promise.all([p1,p2,p3])
+let prom=Promise.all([p1,p2,p3])   //apply the .all method like follow the p1,p2,p3 
 prom.then(res=console.log(res))
 prom.catch(err=console.log(err))
 
@@ -90,7 +90,7 @@ prom.catch(err=console.log(err))
         setTimeout(resolve,2000,"Done quick");     //done with 2 second
       });
  
-      Promise.any([pErr,pSlow,pFast]).then((value)=>{  //apply the any method like follow the pErr,pSlow,pFast 
+      Promise.any([pErr,pSlow,pFast]).then((value)=>{  //apply the .any method like follow the pErr,pSlow,pFast 
         console.log(value);
       });
 
@@ -102,7 +102,7 @@ prom.catch(err=console.log(err))
     let p1=Promise.resolve('✅done the process')
     let p2=Promise.resolve('❌not found the process')
     
-    Promise.allSettled([p1,p2])
+    Promise.allSettled([p1,p2])  //apply the .allSettled method like follow the p1,p2
     .then(res=>console.log(res))
 </script>
 
