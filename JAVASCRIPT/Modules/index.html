@@ -6,7 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-   
+   <!--MODULES:- 1.A module in JavaScript is a reusable code.
+                 2.It is exported from one file and imported into another using export and import statements. 
+                 3.Keyword:-1.export: A keyword used to make variables, functions, or classes available outside the module.
+                            2.import: A keyword used to bring in exported variables, functions, or classes from another module.
+               
+        EXAMPLES:- // module.js
+                  1. export const name = "ABHIJEET";
+
+                  //flower.js
+                  1. let flower =["lotus","jui"];
+                  2. const company='Infosys';
+
+                  export{flower,company}
+
+                  // script.js
+                 import { name } from './module.js';
+
+                  import {flower,company} from './flower.js';
+
+                  console.log(name)
+                  console.log(flower,company)
+
+                 -->
     <script type="module" src="./script.js"></script>
     
 </body>

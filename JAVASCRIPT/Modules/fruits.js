@@ -4,6 +4,8 @@ console.log(fruits)
 
 export {fruits}
 
-//  const fruit1=["🍉🥭","🥭🍋‍🟩","🍉🍉🍉🍈🍈🍈✅✅"];
+ const fruit1=["🍉🥭","🥭🍋‍🟩","🍉🍉🍉🍈🍈🍈✅✅"];
 
-// export {fruit1}
+//  console.log(fruit1)
+
+export {fruit1}
