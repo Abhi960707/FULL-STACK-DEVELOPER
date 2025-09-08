@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- find method:-same the filter method but small change is first attempt milnewala data. -->
+    <script>
+        let arr = [
+            {
+                name: 'user 1',
+                age: 21
+            },
+            {
+                name: 'user 2',
+                age: 23
+            },
+            {
+                name: 'user 3',
+                age: 25
+            },
+            {
+                name: 'user 4',
+                age: 27
+            },
+            {
+                name: 'user 5',
+                age: 29
+            },
+            {
+                name: 'user 6',
+                age: 23
+            },
+            {
+                name: 'user 7',
+                age: 23
+            },
+        ]
+         let findUser = arr.find((user) => {
+            return user.age == 23
+        })
+
+
+        console.log(findUser)
+// ========================================================================================
+      
+function userDetails() {  //this call by the Global Variable Declared outside of any function or block. 
+            let user = {
+                name: 'Pawan',
+                age: 50
+            }
+            showUserName(user.name)
+        }
+
+
+        function showUserName(name){
+            console.log(name)
+        }
+        userDetails()
+        let num = 2;
+        function outer() {
+            let num = 1;
+            return function () {
+                num++
+                console.log(num)
+            }
+        }
+
+
+        let counter = outer()
+        counter()
+        counter()
+        counter()
+        counter()
+        counter()
+        counter()
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance array method</title>
+</head>
+<body>
+    <!--  
+   1. filter method:-filter array return or filter & data filter.
+                     Returns a new array with elements that pass a condition.
+
+    2.map method:- array check after all changes through user.
+                   map → Creates a new array by transforming each element.
+    
+    3.Reduce Method:- Reduces the array to a single value (sum, max, etc.).
+                     ex:- add to cart me 2-3 product liye uske bad us 2-3 product ki total honi wali method is reduce method
+                      
+    
+    4.find method:-same the filter method but small change is first attempt milnewala data.
+                   Returns the first element that matches a condition.
+      
+     #function              
+    outer → A function that returns another function (used to create a closure).
+
+    counter → The returned inner function that remembers and updates state using closure.               
+
+   
+    javascript priority jyada functionla dete
+    Ajax:- particular data add this page this data is refresh not refresh the all page this is a ajax.
+           only particular data update not update the all page.
+    -->
+      <script>
+        let arr = [
+            {
+                name: 'user 1',
+                age: 21
+            },
+            {
+                name: 'user 2',
+                age: 23
+            },
+            {
+                name: 'user 3',
+                age: 25
+            },
+            {
+                name: 'user 4',
+                age: 27
+            },
+            {
+                name: 'user 5',
+                age: 29
+            },
+            {
+                name: 'user 6',
+                age: 23
+            },
+            {
+                name: 'user 7',
+                age: 23
+            },
+        ]
+
+//filter method
+        arr.forEach(ele => {
+            if(ele.name == 'user 5'){
+                console.log(ele)
+            }
+        })
+
+         let filterUser = arr.filter((user) => {
+        console.log(user)
+        return user.age == 23
+        })
+        console.log(filterUser)
+
+//===================================================================================================
+//map method
+ let changeArr = arr.map((user) => {
+            return user.age == 23 ? {
+                ...user,
+                active: true
+            } : user
+        })
+
+        // console.log(changeArr)
+
+       
+
+        let numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let incrementNum = numArr.map((num) => {
+            return num + 1
+        })
+ console.log(incrementNum)
+
+// ======================================================================================================
+//reduce method
+  let numArr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9] //All numbers addition total is show
+        let reduceArr = numArr1.reduce((num1, num2) => {
+            console.log(num1 + " : " + num2)
+            return num1 + num2
+        })
+        console.log(reduceArr)
+
+// =========================================================================================================
+//find method
+ let findUser = arr.find((user) => {
+            return user.age == 23
+        })
+
+
+        console.log(findUser)
+
+
+// ===============================================================================================
+//outer() & counter() → Closure (function returning another function with preserved state)
+       
+function userDetails() { //global variable decleration 
+            let user = {
+                name: 'Pawan',
+                age: 50
+            }
+            showUserName(user.name)
+        }
+
+
+        function showUserName(name){
+            console.log(name)
+        }
+        userDetails()
+        let num = 2;
+        function outer() {   //outer function
+            let num = 1;
+            return function () {
+                num++
+                console.log(num)
+            }
+        }
+
+
+        let counter = outer()  //used the counter function
+        counter()
+        counter()
+        counter()
+        counter()
+        counter()
+        counter()
+
+
+</script>
+</body>
+</html>

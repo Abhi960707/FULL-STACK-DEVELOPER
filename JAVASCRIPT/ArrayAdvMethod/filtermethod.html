@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter the data </title>
+</head>
+<body>
+    <!--  filter method:-filter array return or filter & data filter.
+      
+    -->
+     <script>
+        let arr = [
+            {
+                name: 'user 1',
+                age: 21
+            },
+            {
+                name: 'user 2',
+                age: 23
+            },
+            {
+                name: 'user 3',
+                age: 25
+            },
+            {
+                name: 'user 4',
+                age: 27
+            },
+            {
+                name: 'user 5',
+                age: 29
+            },
+            {
+                name: 'user 6',
+                age: 23
+            },
+            {
+                name: 'user 7',
+                age: 23
+            },
+        ]
+
+
+        arr.forEach(ele => {
+            if(ele.name == 'user 5'){
+                console.log(ele)
+            }
+        })
+
+         let filterUser = arr.filter((user) => {
+        console.log(user)
+        return user.age == 23
+        })
+
+        console.log(filterUser)
+
+        </script>
+</body>
+</html>
