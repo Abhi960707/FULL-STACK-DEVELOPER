@@ -17,6 +17,150 @@
          Asynchronization:-1.Randomely read the data by using hold for particularr time
                            Ex:-onedrive 1 year complete notification .this is a Asynchronization.                -->
     <script>
+         // async function showData() {
+        //     let data = await fetch('./index.json')
+        //     let result = await data.json()
+        //     // console.log(result)
+        //     return result
+        // }
+        // showData().then(res => {
+
+
+        // }).catch(err => alert(err))
+
+
+        let str = 'Hii im New Straing'
+        // let newStr = [...str]
+        // let newStr = { ...str } // spread
+        // console.log(newStr)
+
+
+        // let arr = [12, 55, 66, 'hiii']
+        // let restData = [arr, obj]
+        // console.log(restData)
+
+
+        // function restFun(...a){
+        //     console.log(...a)
+        // }
+        // restFun([12, 55, 66, 'hiii'],
+        // 'hiii',
+        // [12])
+
+
+        // let obj = {
+        //     name: 'User1',
+        //     email: 'user@gmail.com',
+        //     pswd: 'user@123',
+        //     city: 'Pune'
+        // }
+
+
+        // let name = obj.name
+        // let email = obj.email
+
+
+        // let { name, city, email } = obj
+        // console.log(name)
+
+
+        fetch('./index.json')
+            .then(res => res.json())
+            .then(res => {
+                // of loop
+                // for (let allUser of res.slice(0, 11)) {
+                //     console.log(allUser)
+                // }
+
+
+                // each loop
+                // res.forEach((element, index) => {
+                // console.log(element)
+                // console.log(index)
+                // })
+            })
+
+
+
+
+        let obj = {
+            name: 'User1',
+            email: 'user@gmail.com',
+            pswd: 'user@123',
+            city: 'Pune'
+        }
+
+
+        for (let allKeys in obj) {
+            console.log(obj[allKeys])
+        }
+
+
+        // Get
+        // fetch('https://fakerestapi.azurewebsites.net/api/v1/Activities')
+        //     .then(res => res.json())
+        //     .then(res => {
+        //         console.log(res)
+        //     })
+
+
+        // POST
+        async function postData(){
+            await fetch('https://fakerestapi.azurewebsites.net/api/v1/Activities',
+            {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    "id": 31,
+                    "title": "abc",
+                    "dueDate": "2025-09-03T06:48:46.057Z",
+                    "completed": true
+                })
+            })
+            .then(res => console.log(res))
+        }
+        postData()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ======================================================================================
         console.log(1)
         console.log(2)
         console.log(3)
