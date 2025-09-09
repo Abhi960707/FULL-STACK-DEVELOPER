@@ -3,12 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rest & Spread used by the collect & expand</title>
 </head>
 <body>
-    <script>
+    <!-- Rest (...) → Collects multiple values into a single array or object.
+                      Used by the ...for rest spread in code.//collect
 
-        
+Spread (...) → Expands an array or object into individual elements.
+                //pasravane means spread or expand  -->
+   
+   <script>
+        //REST
+// In function parameters
+function myFunc(a, b, ...rest) {
+  console.log(rest); // collects remaining arguments
+}
+
+// In array destructuring
+const [x, ...y] = [1, 2, 3, 4];
+// x = 1, y = [2, 3, 4]
+
+// In object destructuring
+const {id, ...details} = {id: 101, name: "Abhi", age: 20};
+// id = 101, details = {name: "Abhi", age: 20}        
     </script>
+
+    <!-- =================================================================================== -->
+
+
+    <!-- SPREAD -->
+    <!-- <SCRipt>
+        // In function parameters
+function myFunc(a, b, ...rest) {
+  console.log(rest); // collects remaining arguments
+}
+
+// In array destructuring
+const [x, ...y] = [1, 2, 3, 4];
+// x = 1, y = [2, 3, 4]
+
+// In object destructuring
+const {id, ...details} = {id: 101, name: "Abhi", age: 20};
+// id = 101, details = {name: "Abhi", age: 20}
+
+    </SCRipt> -->
 </body>
 </html>
