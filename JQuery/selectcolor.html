@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select color</title>
+</head>
+<body>
+    <select name="" id="select">
+        <option selected disabled>---Select color---</option>
+        <option value="red">red</option>
+        <option value="yellow">yellow</option>
+        <option value="green">green</option>
+        <option value="gray">gray</option>
+        <option value="Orange">orange</option>
+        <option value="violet">violet</option>
+    </select>
+
+    <script src="./jquery-3.7.1.min.js"></script>
+ 
+    <script>
+        $('#select').change(function(){
+            let colorName=$(this).val()
+            console.log(colorName)
+            document.querySelector('body').style.backgroundColor=colorName
+        })
+    </script>
+
+</body>
+</html>

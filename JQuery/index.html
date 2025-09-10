@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Syntax:-$('css selector').action() -->
+
+    <button>click me</button>
+    <button>show</button>
+    <script src="./jquery-3.7.1.min.js"></script>
+
+    <script>
+        let btn=document.querySelector('button')
+        btn.addEventListener('click',()=>{
+            alert("It Is jQuery")
+        })
+
+        // console.log(jQuery)
+        // console.log($)
+        //$('css selector').action() 
+
+        let newBtn=$('#show').click(function(){
+            alert('hii im Alert')
+            let text =$('#show').text()
+            $('#show').text("hii im show Btn 👑👑")
+            console.log(text)
+
+            let imgAttr=$('img').attr('alt')  //this is attr predifined word /this attr is  attribute.
+            console.log(imgAttr)
+
+            $('img').attr('alt','👑✅✅👑')
+        })
+
+        console.log(newBtn)
+    </script>
+</body>
+</html>
